@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php require 'modals.php'?>
+<?php require 'modals.php' ?>
 <html lang="en">
 
 <head>
@@ -12,9 +12,9 @@
 
   <title>SB Admin 2 - Tables</title>
 
-    <!-- datatable lib -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <!-- datatable lib -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
   <!-- Datatable CSS -->
   <link href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css' rel='stylesheet' type='text/css'>
@@ -358,37 +358,86 @@
               <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
             </div>
             <div class="d-flex flex-row justify-content-end ">
-                        <button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#myModal">
-                              Click To Insert
-                        </button>
-             </div>
+              <button type="button" class="btn btn-warning text-white" data-toggle="modal" data-target="#myModal">
+                Click To Insert
+              </button>
+            </div>
             <div class="card-body">
-              <div class="table-responsive" >
-                <table class='display' id="myexm"  width="100%" cellspacing="0">
+              <div class="table-responsive">
+                <table class='display' id="myexm" width="100%" cellspacing="0">
                   <thead class="thead-light">
-                  <tr>
-      							<th class="th-sm">plot_Id</th>
-      							<th class="th-sm">ep_plot_Id</th>
-      							<th class="th-sm">exploratory</th>
-      							<th class="th-sm">latitude</th>
-      							<th class="th-sm">longitude</th>
-      							<th class="th-sm">landuse</th>
-      						</tr>
+                    <tr>
+                      <th class="th-sm">plot_Id</th>
+                      <th class="th-sm">ep_plot_Id</th>
+                      <th class="th-sm">exploratory</th>
+                      <th class="th-sm">latitude</th>
+                      <th class="th-sm">longitude</th>
+                      <th class="th-sm">landuse</th>
+                    </tr>
                   </thead>
                 </table>
               </div>
               <script>
-        $(document).ready(function(){
-            var dataTable=$('#myexm').DataTable({
-                "processing": true,
-                "serverSide":true,
-                "ajax":{
-                    url:"backend.php",
-                    type:"post"
-                }
-            });
-        });
-    </script>
+                var result2 = [
+                  ["Row 1 Value 1", "Row 1 Value 2", "Row 1 Value 3", "Row 1 Value 4", "Row 1 Value 1", "Row 1 Value 2"],
+                  ["Row 2 Value 1", "Row 2 Value 2", "Row 2 Value 3", "Row 2 Value 4", "Row 1 Value 1", "Row 1 Value 2"],
+                ];
+
+                var result3 = [
+                  ["A8338", "AEG(10)_canceled", "ALB", "48.39", "9.272", "Grassland"],
+                  ["A32886", "AEG(29)_canceled", "ALB", "48.47", "9.432", "Grassland"],
+                  ["A19557", "AEG1", "ALB", "48.4", "9.346", "Grassland"]
+                ];
+
+
+                // $(document).ready(function() {
+
+                //   $.ajax({
+                //     url: "backend.php",
+                //     type: "post",
+                //     success: function(result) {
+
+                //       $('#myexm').DataTable({
+                //         data: result
+                //       });
+
+                //     }
+                //   });
+
+                // });
+
+
+                // $(document).ready(function() {
+
+                //   $('#myexm').DataTable({
+                //     // "processing": true,
+                //     // "serverSide": true,
+
+                //     // VARINATE 1
+                //     "ajax": {
+                //       url: "backend.php",
+                //       type: "post"
+                //     }
+
+                //     // VARINATE 2
+                //     //   "ajax": "backend.php"
+
+                //   });
+                // });
+
+
+
+                $(document).ready(function() {
+                  var dataTable = $('#myexm').DataTable({
+                    //       "processing": true,
+                    //         "serverSide": true,
+                    "ajax": {
+                      url: "backend.php",
+                      type: "post"
+                    }
+                  });
+                });
+              </script>
             </div>
           </div>
 

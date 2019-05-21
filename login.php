@@ -1,12 +1,13 @@
 <?php
 include 'include/controller.php';
-if(isset($_SESSION['user_name'])){
+if (isset($_SESSION['user_name'])) {
 
-    header("location:index.php");
+  header("location:index.php");
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="utf-8">
@@ -48,10 +49,10 @@ if(isset($_SESSION['user_name'])){
                   </div>
                   <form action="" class="login" method="post">
                     <div class="form-group">
-                      <input type="text" class="form-control form-control-user" value="<?php echo $username;?>"  autofocus autocomplete="off" placeholder="Username" required name="username"/><?php echo $usernameErr; ?>
-                      <input type="password" class="form-control form-control-user" required name="txtpassword"  placeholder="Password"/><?php echo $passwordErr; ?>
+                      <input type="text" class="form-control form-control-user" value="<?php echo $username; ?>" autofocus autocomplete="off" placeholder="Username" required name="username" /><?php echo $usernameErr; ?>
+                      <input type="password" class="form-control form-control-user" required name="txtpassword" placeholder="Password" /><?php echo $passwordErr; ?>
 
-                      <input type="submit" name="login" value="Sign In" class="btn btn-primary btn-user btn-block btn-success btn-sm"/>
+                      <input type="submit" name="login" value="Sign In" class="btn btn-primary btn-user btn-block btn-success btn-sm" />
 
                     </div>
 
@@ -71,13 +72,13 @@ if(isset($_SESSION['user_name'])){
                       <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
                     </a>
 
-                  <hr>
-                  <div class="text-center">
-                    <a class="small" href="forgot-password.html">Forgot Password?</a>
-                  </div>
-                  <div class="text-center">
-                    <a class="small" href="register.html">Create an Account!</a>
-                  </div>
+                    <hr>
+                    <div class="text-center">
+                      <a class="small" href="forgot-password.html">Forgot Password?</a>
+                    </div>
+                    <div class="text-center">
+                      <a class="small" href="register.html">Create an Account!</a>
+                    </div>
                   </form>
                 </div>
               </div>

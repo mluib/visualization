@@ -120,5 +120,3 @@ if(isset($_POST['login'])){
         $username = "";
     }
 }
-
-?>

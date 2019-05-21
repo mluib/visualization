@@ -2,23 +2,23 @@
 include 'include/controller.php';
 $session_username = $username;
 //$session_role = $_SESSION['role'];
-if(empty($_SESSION['user_name'])){
-    header("location:login.php");
+if (empty($_SESSION['user_name'])) {
+  header("location:login.php");
 }
 ?>
 
 <div id='loader'>
-      <div class="spinner"></div>
-    </div>
+  <div class="spinner"></div>
+</div>
 
-    <script>
-      window.addEventListener('load', function load() {
-        const loader = document.getElementById('loader');
-        setTimeout(function() {
-          loader.classList.add('fadeOut');
-        }, 300);
-      });
-    </script>
+<script>
+  window.addEventListener('load', function load() {
+    const loader = document.getElementById('loader');
+    setTimeout(function() {
+      loader.classList.add('fadeOut');
+    }, 300);
+  });
+</script>
 
 <head>
 
